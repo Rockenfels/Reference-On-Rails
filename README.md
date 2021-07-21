@@ -1,6 +1,6 @@
 # Reference on Rails
 
-![Mountain biker seninding it!](https://media.giphy.com/media/SvjMruFPXPixOIGDch/giphy.gif)
+![Mountain biker sending it!](https://media.giphy.com/media/SvjMruFPXPixOIGDch/giphy.gif)
 
 ## What?
 This repo is meant to serve as a cheat sheet on rails! Because OOP centers around the idea of creating digital representations of the real world, I represented one of my favorite things: :mountain_bicyclist: bikes!
