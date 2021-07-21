@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  brand: MyString
+  model: MyString
+  year: 1
+  color: MyString
+  gears: 1
+  suspension: 1
+  hyraulic: false
+  tubeless: false
+
+two:
+  id: 1
+  brand: MyString
+  model: MyString
+  year: 1
+  color: MyString
+  gears: 1
+  suspension: 1
+  hyraulic: false
+  tubeless: false
