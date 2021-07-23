@@ -18,7 +18,7 @@ class CreateRiders < ActiveRecord::Migration[6.1]
       t.string :last_name, null:false, default:""
       t.string :preferred_name
       t.string :email, null:false
-      t.string :uid, null: false
+      t.string :uid
 
       t.timestamps
     end
