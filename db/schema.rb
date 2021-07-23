@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_20_163317) do
+ActiveRecord::Schema.define(version: 2021_07_23_210114) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,9 +18,11 @@ ActiveRecord::Schema.define(version: 2021_07_20_163317) do
   create_table "bike_shops", force: :cascade do |t|
     t.string "name", null: false
     t.string "address", null: false
-    t.integer "phone_number", null: false
+    t.bigint "phone_number", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email"
+    t.string "email_confirmation"
   end
 
   create_table "bikes", force: :cascade do |t|
@@ -36,6 +38,8 @@ ActiveRecord::Schema.define(version: 2021_07_20_163317) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "rider_id"
     t.bigint "bike_shop_id"
+    t.integer "price"
+    t.boolean "for_sale", default: false
     t.index ["bike_shop_id"], name: "index_bikes_on_bike_shop_id"
     t.index ["rider_id"], name: "index_bikes_on_rider_id"
   end
@@ -45,9 +49,10 @@ ActiveRecord::Schema.define(version: 2021_07_20_163317) do
     t.string "last_name", default: "", null: false
     t.string "preferred_name"
     t.string "email", null: false
-    t.string "uid", null: false
+    t.string "uid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email_confirmation"
   end
 
   add_foreign_key "bikes", "bike_shops"
